@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 
 class Book extends Component {
 
+    static defaultProps = {
+        authors: []
+    }
+
     static propTypes = {
         shelf: PropTypes.string,
         shelfs: PropTypes.array.isRequired,
@@ -20,7 +24,7 @@ class Book extends Component {
                 <div className="book-shelf-changer">
                     <select 
                         onChange={(e) => this.props.onSetShelf(e.target.options[e.target.selectedIndex].value)}
-                        value={this.props.shelf}>
+                        value={this.props.shelf || 'none'}>
                         <option value="none" disabled>Move to...</option>
                         {
                             this.props.shelfs.map((shelf) => (
