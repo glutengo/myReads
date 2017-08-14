@@ -35,7 +35,11 @@ class Book extends Component {
                                 </option>
                             ))
                         }
-                        <option value="none">None</option>
+                        {
+                            this.props.shelf && (
+                                <option value="none">None</option>
+                            )
+                        }
                     </select>
                 </div>
                 </div>

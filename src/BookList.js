@@ -14,7 +14,7 @@ class BookList extends Component {
                             shelfs={this.props.shelfs}
                             title={book.title}
                             authors={book.authors}
-                            coverUrl={book.imageLinks.thumbnail}
+                            coverUrl={book.imageLinks ? book.imageLinks.thumbnail : ''}
                             onSetShelf={shelf => this.props.onUpdate(book, shelf)}
                         />
                     </li>))}

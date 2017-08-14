@@ -12,7 +12,29 @@ class SearchBooks extends Component {
 
     updateQuery = (query) => {
         this.setState({query: query})
-        BooksAPI.search(query.trim()).then((response) => this.setState({books: response.error ? [] : response }))
+        query = query.trim();
+        if (query.length) {
+            // search for books. If query was deleted in the meantime or the response is erroneous, set books to empty array
+            BooksAPI.search(query.trim()).then((response) => {
+                this.setState((state) => {
+                    if (!this.state.query.length || !response || response.error) {
+                        return { books: [] }
+                    } else {
+                        return { 
+                            books: response.map((book) => {
+                                const knownBook = this.props.books.find((b) => b.id === book.id)
+                                if (knownBook) {
+                                    book.shelf = knownBook.shelf
+                                }
+                                return book
+                            }) 
+                        }
+                    }
+                })
+            })
+        } else {
+            this.setState({books: []});
+        }
     }
 
     render() {

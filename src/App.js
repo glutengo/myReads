@@ -58,21 +58,16 @@ class BooksApp extends React.Component {
             </div>
             <div className="list-books-content">
               <div>
-                <BookShelf 
-                  title="Currently Reading" 
-                  books={this.state.books.filter(book => book.shelf === 'currentlyReading')}
-                  shelfs={this.shelfs}
-                  onUpdate={(book, shelf) => this.updateBook(book, shelf)}/>
-                <BookShelf 
-                  title="Want to Read" 
-                  books={this.state.books.filter(book => book.shelf === 'wantToRead')}
-                  shelfs={this.shelfs}
-                  onUpdate={(book, shelf) => this.updateBook(book, shelf)}/>
-                <BookShelf 
-                  title="Read" 
-                  books={this.state.books.filter(book => book.shelf === 'read')}
-                  shelfs={this.shelfs}
-                  onUpdate={(book, shelf) => this.updateBook(book, shelf)}/>
+                {
+                  this.shelfs.map(s => (
+                    <BookShelf
+                      key={s.value}
+                      title={s.display}
+                      books={this.state.books.filter(book => book.shelf === s.value)}
+                      shelfs={this.shelfs}
+                      onUpdate={(book, shelf) => this.updateBook(book, shelf)}/>
+                  ))
+                }
               </div>
             </div>
             <div className="open-search">
