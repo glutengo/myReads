@@ -6,8 +6,10 @@ class BookShelf extends Component {
     
     static propTypes = {
         title: PropTypes.string.isRequired,
-        books: PropTypes.array.isRequired
-    };
+        books: PropTypes.array.isRequired,
+        shelfs: PropTypes.array.isRequired,
+        onSetShelf: PropTypes.func.isRequired
+    }
 
     render() {
         return (
@@ -17,11 +19,11 @@ class BookShelf extends Component {
                     <BookList 
                         books={this.props.books}
                         shelfs={this.props.shelfs}
-                        onUpdate={this.props.onUpdate}/>
+                        onSetShelf={this.props.onSetShelf}/>
                   </div>
             </div>
         )
     }
 }
 
-export default BookShelf;
+export default BookShelf

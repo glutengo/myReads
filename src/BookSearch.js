@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import BookList from './BookList'
 import * as BooksAPI from './BooksAPI'
 
-class SearchBooks extends Component {
+class BookSearch extends Component {
 
     state = {
         query: '',
@@ -12,14 +12,16 @@ class SearchBooks extends Component {
 
     updateQuery = (query) => {
         this.setState({query: query})
-        query = query.trim();
+        query = query.trim()
         if (query.length) {
-            // search for books. If query was deleted in the meantime or the response is erroneous, set books to empty array
+            // search for books
             BooksAPI.search(query.trim()).then((response) => {
                 this.setState((state) => {
+                    // if query was deleted in the meantime or the response is erroneous, set books to empty array
                     if (!this.state.query.length || !response || response.error) {
                         return { books: [] }
                     } else {
+                        // else update books. Use books from shelfs if possible as search results do not include shelf information
                         return { 
                             books: response.map((book) => {
                                 const knownBook = this.props.books.find((b) => b.id === book.id)
@@ -33,7 +35,7 @@ class SearchBooks extends Component {
                 })
             })
         } else {
-            this.setState({books: []});
+            this.setState({books: []})
         }
     }
 
@@ -62,11 +64,11 @@ class SearchBooks extends Component {
                     <BookList 
                         books={this.state.books}
                         shelfs={this.props.shelfs}
-                        onUpdate={this.props.onUpdate}/>
+                        onSetShelf={this.props.onSetShelf}/>
                 </div>
             </div>
         )
     }
 }
 
-export default SearchBooks;
+export default BookSearch
