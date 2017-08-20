@@ -1,15 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import './BackButton.css'
 
-class BackButton extends Component {
-    render() {
-        return (
-            <button 
-                className="back-button"
-                onClick={this.props.history.goBack}
-                />
-        )
-    }
+function BackButton (props) {
+    return (
+        <button 
+            className="back-button"
+            onClick={props.history.goBack}/>
+    )
+}
+
+BackButton.PropTypes = {
+    history: PropTypes.object.isRequired
 }
 
 export default BackButton

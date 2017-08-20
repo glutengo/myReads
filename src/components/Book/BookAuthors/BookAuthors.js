@@ -1,19 +1,21 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import './BookAuthors.css'
 
-class BookAuthors extends Component {
+function BookAuthors(props)  {
+    return (
+        <ul className="book-authors">
+        {
+            props.authors.map((author) => (
+                <li key={author}>{author}</li>
+            ))
+        }
+        </ul>
+    )
+}
 
-    render() {
-        return (
-            <ul className="book-authors">
-            {
-                this.props.authors.map((author) => (
-                    <li key={author}>{author}</li>
-                ))
-            }
-            </ul>
-        )
-    }
+BookAuthors.PropTypes = {
+    authors: PropTypes.array.isRequired
 }
 
 export default BookAuthors
