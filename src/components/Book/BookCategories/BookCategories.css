@@ -1,0 +1,16 @@
+.book-categories ul {
+  display: inline-block;
+  padding: 0;
+}
+
+.book-categories li {
+  margin-right: 5px;
+  padding: 2px 10px;
+  background-color: rgb(220,220,220);
+  border-radius: 15px;
+  list-style: none;
+}
+
+.book-categories i {
+    margin-right: 10px;
+}

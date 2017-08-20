@@ -1,13 +1,14 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import BookList from './BookList'
+import BookList from '../../BookList/BookList'
+import './BookShelf.css'
 
 class BookShelf extends Component {
     
     static propTypes = {
         title: PropTypes.string.isRequired,
         books: PropTypes.array.isRequired,
-        shelfs: PropTypes.array.isRequired,
+        shelves: PropTypes.array.isRequired,
         onSetShelf: PropTypes.func.isRequired
     }
 
@@ -18,7 +19,7 @@ class BookShelf extends Component {
                   <div className="bookshelf-books">
                     <BookList 
                         books={this.props.books}
-                        shelfs={this.props.shelfs}
+                        shelves={this.props.shelves}
                         onSetShelf={this.props.onSetShelf}/>
                   </div>
             </div>

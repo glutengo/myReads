@@ -1,7 +1,9 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import BookList from './BookList'
-import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from '../../util/BooksAPI'
+import BookList from '../BookList/BookList'
+import BackButton from '../BackButton/BackButton'
+import './BookSearch.css'
 
 class BookSearch extends Component {
 
@@ -21,7 +23,7 @@ class BookSearch extends Component {
                     if (!this.state.query.length || !response || response.error) {
                         return { books: [] }
                     } else {
-                        // else update books. Use books from shelfs if possible as search results do not include shelf information
+                        // else update books. Use books from shelves if possible as search results do not include shelf information
                         return { 
                             books: response.map((book) => {
                                 const knownBook = this.props.books.find((b) => b.id === book.id)
@@ -41,10 +43,10 @@ class BookSearch extends Component {
 
     render() {
         return (
-            <div className="search-books">
-                <div className="search-books-bar">
-                    <Link className="close-search" to="/">Close</Link>
-                    <div className="search-books-input-wrapper">
+            <div className="book-search">
+                <div className="book-search-bar">
+                    <BackButton history={this.props.history}/>
+                    <div className="book-search-input-wrapper">
                     {/* 
                         NOTES: The search from BooksAPI is limited to a particular set of search terms.
                         You can find these search terms here:
@@ -60,10 +62,10 @@ class BookSearch extends Component {
                         placeholder="Search by title or author"/>
                     </div>
                 </div>
-                <div className="search-books-results">
+                <div className="book-search-results">
                     <BookList 
                         books={this.state.books}
-                        shelfs={this.props.shelfs}
+                        shelves={this.props.shelves}
                         onSetShelf={this.props.onSetShelf}/>
                 </div>
             </div>

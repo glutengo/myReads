@@ -1,0 +1,16 @@
+.back-button {
+  display: block;
+  top: 20px;
+  left: 15px;
+  width: 50px;
+  height: 53px;
+  background: white;
+  background-image: url('../../icons/arrow-back.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  border: none;
+  outline: none;
+  font-size: 0;
+  cursor: pointer;
+}

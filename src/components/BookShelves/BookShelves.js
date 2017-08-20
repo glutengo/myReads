@@ -1,31 +1,32 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import BookShelf from './BookShelf'
+import BookShelf from './BookShelf/BookShelf'
+import './BookShelves.css'
 
 class BookShelves extends Component {
     
     static propTypes = {
         books: PropTypes.array.isRequired,
-        shelfs: PropTypes.array.isRequired,
+        shelves: PropTypes.array.isRequired,
         onSetShelf: PropTypes.func.isRequired
     }
 
     render() {
         return (
-            <div className="list-books">
-            <div className="list-books-title">
+            <div className="book-shelves">
+            <div className="book-shelves-title">
               <h1>MyReads</h1>
             </div>
-            <div className="list-books-content">
+            <div className="book-shelves-content">
               <div>
                 {
-                  this.props.shelfs.map(shelf => (
+                  this.props.shelves.map(shelf => (
                     <BookShelf
                       key={shelf.value}
                       title={shelf.display}
                       books={this.props.books.filter(book => book.shelf === shelf.value)}
-                      shelfs={this.props.shelfs}
+                      shelves={this.props.shelves}
                       onSetShelf={(book, newShelf) => this.props.onSetShelf(book, newShelf)}/>
                   ))
                 }

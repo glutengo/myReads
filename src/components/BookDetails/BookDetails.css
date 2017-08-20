@@ -1,0 +1,64 @@
+
+.book-details {
+  display: flex;
+  justify-content: center;
+}
+
+.book-details .details {
+  width: 100%;
+}
+
+.book-details .book {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.book-details .book .book-top {
+  order: 2;
+}
+
+.book-details .book-title {
+  order: 0;
+  font-size: 2em;
+  margin-top: 4px;
+}
+
+.book-details .details > div {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.book-details .book-authors {
+  font-size: 1em;
+  margin-top: 0;
+}
+
+.book-details .book-authors li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.book-details .book-authors li:not(:last-child):after {
+  content: ',';
+}
+
+.book-details .book-shelf-changer {
+  position: absolute;
+  left: 100px;
+  right: auto;
+  bottom: -10px;
+}
+
+.book-details .book-categories {
+  margin-top: 20px;
+}
+
+.book-details .book-published i {
+  margin-right: 10px;
+}
+
+.book-details .details-description {
+  margin-top: 20px;
+}
+

@@ -6,19 +6,26 @@ This is my solution  for the final assessment project for Udacity's React Fundam
  |-- index.html - DO NOT MODIFY
  |-- favicon.ico - React Icon, You may change if you wish.
 +-- src/
+ +-- components/ All react components. Each has a JS and a CSS file.
+  +-- App - This is the root of the app. The initial data is loaded here. Routes are also set up here.
+  +-- BackButton - A simple BackButton component ensuring it looks and behaves the same everywhere in the application.
+  +-- Book - Collection of subcomponents to help build components to reflect a book. Used in BookDetails and BookListItem.
+   +-- BookAuthors - List of Book Authors.
+   +-- BookCategories - List of Book Categories.
+   +-- BookPurchase - Buttons for info and preview link on google.
+   +-- BookShelfChanger - Component to change the shelf a book is in.
+  +-- BookDetails - Extra component to display the details of a book.
+  +-- BookList - Component to display a list of books. Used in BookShelf and BookSearch.
+   +-- BookListItem - Component to reflect a book as a list item
+  +-- BookSearch - Component to search additional books and add them to the shelves.
+  +-- BookShelves - BookShelves component, has a page title and a list of book shelves. Uses the BookShelf component.
+   +-- BookShelf - BookShelf component, has a title and a list of books. Uses the BookList component.
  +-- icons/ - Helpful images for your app. Use at your discretion.
   |-- add.svg
   |-- arrow-back.svg
   |-- arrow-drop-down.svg
- |-- App.js - This is the root of the app. The initial data is loaded here. Routes are also set up here.
- |-- App.css - Styles for the app. Little customization was made. If I were to really bring in other styles, I would have used something like react-material, but I did not fancy going that far.
- |-- App.test.js - Used for testing. No additional tests were implemented.
- |-- Book.js - Book component, used to display a books cover, title and authors. Also includes a select setting the book shelf. Props: 
- |-- BookList.js - BookList component, used to display a list of books. Uses the Book component.
- |-- BooksAPI.js - A JavaScript API for the provided Udacity backend. 
- |-- BookSearch.js - BookSearch component, includes an input field (controlledComponent) with backend communication and displays a list of books (search result; uses the BookList component).
- |-- BookShelf.js - BookShelf component, has a title and a list of books. Uses the BookList component.
- |-- BookShelves.js - BookShelves component, has a page title and a list of book shelves. Uses the BookShelf component.
+ +-- util/ - Util javascripts
+  |-- BooksAPI.js - A JavaScript API for the provided Udacity backend.
  |-- index.js - BrowserRouter was added here. Also the shelves are defined in this file and passed to the app.
  |-- index.css - Global styles. You probably won't need to change anything here.
 |-- .gitignore 

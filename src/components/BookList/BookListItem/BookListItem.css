@@ -1,0 +1,29 @@
+.book-list-item {
+    width: 140px;
+}
+
+.book-list-item .book-title,
+.book-list-item .book-authors {
+  font-size: 0.8em;
+}
+
+.book-list-item .book-title {
+  margin-top: 10px;
+}
+
+.book-list-item .book-authors {
+  color: #999;
+}
+
+.book-list-item .book-shelf-changer {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+}
+
+.book-list-item .book-top {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+}

@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App'
+import App from './components/App/App'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 
-const shelfs = [
+const shelves = [
     {
         value: 'currentlyReading', 
         display:'Currently Reading'
@@ -19,4 +19,4 @@ const shelfs = [
     }
 ]
 
-ReactDOM.render(<BrowserRouter><App shelfs={shelfs}/></BrowserRouter>, document.getElementById('root'))
+ReactDOM.render(<BrowserRouter><App shelves={shelves}/></BrowserRouter>, document.getElementById('root'))

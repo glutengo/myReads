@@ -1,0 +1,8 @@
+.book-authors {
+    padding: 0;
+}
+
+.book-authors li {
+    list-style: none;
+    padding: 0;
+}
