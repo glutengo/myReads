@@ -37,8 +37,8 @@ The details view shows detailed information of a book. In addition to the title,
 ## Code
 ```
 +--public/    
- |-- index.html - DO NOT MODIFY
- |-- favicon.ico - React Icon, You may change if you wish.
+ |-- index.html - Template file
+ |-- favicon.ico - React Icon
 +-- src/
  +-- components/ All react components. Each has a JS and a CSS file.
   +-- App - This is the root of the app. The initial data is loaded here. Routes are also set up here.
@@ -63,13 +63,12 @@ The details view shows detailed information of a book. In addition to the title,
  |-- index.js - BrowserRouter was added here. Also the shelves are defined in this file and passed to the app.
  |-- index.css - Global styles. You probably won't need to change anything here.
 |-- .gitignore 
-|-- CONTRIBUTING.MD - Information about contributing to this repo. 
-TL;DR - Fork and clone your own version of this to use it.
 |-- README.MD - This README file.
 |-- SEARCH_TERMS.md - The whitelisted short collection of available search terms 
 for you to use with your app.
-|-- package.json - npm package manager file. It's unlikely that you'll need to modify this.
+|-- package.json - npm package manager file.
+```
 
-## create-react-app
+# create-react-app
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). More information on how to perform common tasks can be found [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
