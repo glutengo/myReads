@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import './BookCover.css'
+import './index.css'
 
 function BookCover(props) {
     const style = { backgroundImage: `url(${props.url}` }

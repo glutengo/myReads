@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import * as BooksAPI from '../../util/BooksAPI'
-import BookList from '../BookList/BookList'
-import BackButton from '../BackButton/BackButton'
-import './BookSearch.css'
+import BookList from '../BookList'
+import BackButton from '../BackButton'
+import './index.css'
 
 class BookSearch extends Component {
 
@@ -40,6 +40,20 @@ class BookSearch extends Component {
         }
     }
 
+    updateBook = (book, shelf) => {
+        this.setState((state) => 
+            ({
+                books: state.books.map((b) => {
+                    if (b.id === book.id) {
+                        b.shelf = shelf;
+                    }
+                    return b
+                })
+            })
+        )
+        this.props.onSetShelf(book, shelf)
+    }
+
     render() {
         return (
             <div className="book-search">
@@ -65,7 +79,7 @@ class BookSearch extends Component {
                     <BookList 
                         books={this.state.books}
                         shelves={this.props.shelves}
-                        onSetShelf={this.props.onSetShelf}/>
+                        onSetShelf={this.updateBook}/>
                 </div>
             </div>
         )

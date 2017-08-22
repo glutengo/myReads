@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import * as BooksAPI from '../../util/BooksAPI'
-import BookShelves from '../BookShelves/BookShelves'
-import BookDetails from '../BookDetails/BookDetails'
-import BookSearch from '../BookSearch/BookSearch'
-import './App.css'
+import BookShelves from '../BookShelves'
+import BookDetails from '../BookDetails'
+import BookSearch from '../BookSearch'
+import './index.css'
 
 class BooksApp extends Component {
 
@@ -56,7 +56,6 @@ class BooksApp extends Component {
             onSetShelf={(book, shelf) => this.updateBookShelf(book, shelf)} />
         )}/>
         <Route path="/detail/:id" render={(props) => {
-          console.log(props)
           if (this.state.books && this.state.books.length) {
             let book = this.state.books.find((book) => (book.id === props.match.params.id))
             if (book) {

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BookShelfChanger from '../../Book/BookShelfChanger/BookShelfChanger'
-import BookAuthors from '../../Book/BookAuthors/BookAuthors'
-import BookCover from '../../Book/BookCover/BookCover'
-import './BookListItem.css'
+import BookShelfChanger from '../../Book/BookShelfChanger'
+import BookAuthors from '../../Book/BookAuthors'
+import BookCover from '../../Book/BookCover'
+import './index.css'
 
 function BookListItem(props) {
     const {book, shelves, onSetShelf} = props

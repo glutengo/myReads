@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './BookPurchase.css'
+import './index.css'
 
 function BookPurchase(props) {
     return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './BackButton.css'
+import './index.css'
 
 function BackButton (props) {
     return (

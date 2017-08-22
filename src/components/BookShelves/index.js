@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import BookShelf from './BookShelf/BookShelf'
-import './BookShelves.css'
+import BookShelf from './BookShelf'
+import './index.css'
 
 function BookShelves(props) {
     return (

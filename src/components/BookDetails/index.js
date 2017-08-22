@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import * as BooksAPI from '../../util/BooksAPI'
-import BackButton from '../BackButton/BackButton'
-import BookCover from '../Book/BookCover/BookCover'
-import BookAuthors from '../Book/BookAuthors/BookAuthors'
-import BookShelfChanger from '../Book/BookShelfChanger/BookShelfChanger'
-import BookPurchase from '../Book/BookPurchase/BookPurchase'
-import BookCategories from '../Book/BookCategories/BookCategories'
-import './BookDetails.css'
+import BackButton from '../BackButton'
+import BookCover from '../Book/BookCover'
+import BookAuthors from '../Book/BookAuthors'
+import BookShelfChanger from '../Book/BookShelfChanger'
+import BookPurchase from '../Book/BookPurchase'
+import BookCategories from '../Book/BookCategories'
+import './index.css'
 
 class BookDetails extends Component {
 

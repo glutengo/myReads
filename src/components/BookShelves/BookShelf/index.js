@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import BookList from '../../BookList/BookList'
-import './BookShelf.css'
+import BookList from '../../BookList'
+import './index.css'
 
 function BookShelf(props) {
     return (

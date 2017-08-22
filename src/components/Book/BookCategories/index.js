@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './BookCategories.css'
+import './index.css'
 
 function BookCategories(props) {
     return (
