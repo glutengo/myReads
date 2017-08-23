@@ -10,7 +10,7 @@ function BackButton (props) {
     )
 }
 
-BackButton.PropTypes = {
+BackButton.propTypes = {
     history: PropTypes.object.isRequired
 }
 

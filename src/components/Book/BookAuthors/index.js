@@ -14,7 +14,7 @@ function BookAuthors(props)  {
     )
 }
 
-BookAuthors.PropTypes = {
+BookAuthors.propTypes = {
     authors: PropTypes.array.isRequired
 }
 

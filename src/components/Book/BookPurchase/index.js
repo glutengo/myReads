@@ -17,7 +17,7 @@ function BookPurchase(props) {
     )
 }
 
-BookPurchase.PropTypes = {
+BookPurchase.propTypes = {
     previewLink: PropTypes.string.isRequired,
     infoLink: PropTypes.string.isRequired
 }

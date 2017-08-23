@@ -17,7 +17,7 @@ function BookCategories(props) {
     )
 }
 
-BookCategories.PropTypes = {
+BookCategories.propTypes = {
     categories: PropTypes.array.isRequired
 }
 

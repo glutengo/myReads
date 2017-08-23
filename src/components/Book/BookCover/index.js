@@ -24,7 +24,7 @@ function BookCover(props) {
     }
 }
 
-BookCover.PropTypes = {
+BookCover.propTypes = {
     url: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     linkTarget: PropTypes.string
